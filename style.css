@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at 20% 10%, #1a2740, #0b1424 60%);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Soft lighting circles */
+.bg-overlay::before,
+.bg-overlay::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  z-index: 0;
+}
+
+.bg-overlay::before {
+  width: 180px;
+  height: 180px;
+  top: 40px;
+  left: 40px;
+}
+
+.bg-overlay::after {
+  width: 220px;
+  height: 220px;
+  bottom: 60px;
+  right: 80px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.game-title {
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.game-title span {
+  display: block;
+  font-size: clamp(48px, 8vw, 110px);
+  color: #ffc400;
+  letter-spacing: 4px;
+  text-shadow: 0 6px 0 #b8860b;
+}
+
+/* Card */
+.main-card {
+  background: #0f1c2e;
+  border: 3px solid #ffc400;
+  border-radius: 20px;
+  padding: 30px 40px 25px;
+  width: min(90%, 720px);
+  box-shadow: 0 0 0 4px rgba(255, 196, 0, 0.15);
+}
+
+.mode-label {
+  color: #ffc400;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-style: italic;
+  color: #e6edf7;
+}
+
+/* Button */
+.enter-btn {
+  background: #ffc400;
+  color: #0b1424;
+  border: none;
+  font-weight: 900;
+  font-size: 22px;
+  padding: 16px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #b8860b;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  margin-bottom: 20px;
+}
+
+.enter-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #b8860b;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controls div {
+  flex: 1;
+  min-width: 140px;
+  background: #1a2a44;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Scroll hint */
+.scroll-tip {
+  margin-top: 40px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+.arrow {
+  font-size: 22px;
+  margin-top: 5px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}

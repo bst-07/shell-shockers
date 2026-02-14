@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Arena...</title>
+<link rel="stylesheet" href="loading.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="back">← BACK TO MENU</div>
+  <div class="title">SHELL SHOCKERS ARENA</div>
+  <div class="fullscreen">FULLSCREEN</div>
+</div>
+
+<div class="loading-wrapper">
+  <img src="shell-logo.png" class="main-logo" alt="Shell Shockers Logo">
+
+  <div class="loading-bar">
+    <div class="progress"></div>
+  </div>
+
+  <img src="bluewizard.png" class="studio-logo" alt="Blue Wizard">
+</div>
+
+<script>
+setTimeout(() => {
+  window.location.href = "game.html"; // your iframe game page
+}, 3500);
+</script>
+
+</body>
+</html>
